@@ -126,10 +126,18 @@
   
                 // Variable definition (before ajax)
                 var outdatedUI = document.getElementById('outdated');
-  
+
+                var pageLang = function (){
+                    const PATH = window.location.pathname;
+
+                    if (PATH.includes('/tag/')){
+                        return PATH.includes('/fr-') ? 'fr' : 'en';
+                    }
+            
+                    return PATH.includes('/fr/') ? 'fr' : 'en';
+                };
+
                 options = options || {};
-  
-                var browserLocale = window.navigator.language || window.navigator.userLanguage; // Everyone else, IE
   
                 // Set default options
                 var browserSupport = options.browserSupport ? updateDefaults(DEFAULTS, options.browserSupport) : DEFAULTS;
@@ -138,7 +146,7 @@
                 var backgroundColor = options.backgroundColor || COLORS.salmon;
                 var textColor = options.textColor || COLORS.white;
                 var fullscreen = options.fullscreen || false;
-                var language = options.language || browserLocale.slice(0, 2); // Language code
+                var language = pageLang(); // Language code
   
                 var updateSource = 'web'; // Other possible values are 'googlePlay' or 'appStore'. Determines where we tell users to go for upgrades.
   

@@ -5557,13 +5557,13 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     text-decoration: none;
     width: 99px;
     height: 36px;
-    border-radius: 4px;
-    padding: 5px 10px;
+    border-radius: 6px;
+    border: none;
     background-color: #122f48; }
   #outdated-content #buttonCloseUpdateBrowser:hover {
-      background-color: white;}
+      background-color: #253F56;}
   #outdated-content #buttonCloseUpdateBrowser:active {
-    background-color: white;}
+    background-color: #4B6174;}
   #outdated-content .browserIconContainer {
     display: inline-block;
     padding: 0.5em 0.5em ;
@@ -5571,7 +5571,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 
   }
   #outdated-content .browserList {
-    padding: 1.5em 0 1em 0;
+    padding: 1.5em 0 0.5em 0;
   }
   #outdated-content .browserIcon {
     height: 45px;
@@ -5611,9 +5611,9 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
       color: #000000;
       background-color: #10d0ea; }
     #outdated-content #buttonCloseUpdateBrowser:hover {
-        background-color: white;}
+        background-color: #0FC0D8;}
     #outdated-content #buttonCloseUpdateBrowser:active {
-      background-color: white;}
+      background-color: #0C9EB2;}
     #outdated-content .disabledIcon {
       fill: #ffffff;
     }

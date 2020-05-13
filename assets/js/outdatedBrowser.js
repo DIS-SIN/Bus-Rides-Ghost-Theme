@@ -495,7 +495,7 @@
                 var startStylesAndEvents = function () {
                     var buttonClose = document.getElementById('buttonCloseUpdateBrowser');
    
-                    buttonClose.onmousedown = function () {
+                    buttonClose.onmouseup = function () {
                         outdatedUI.style.display = 'none';
                         sessionStorage.setItem('outdated', 'acknowledged');
                         return false;
@@ -539,8 +539,7 @@
                         browserSupportMessage + '</div>'
                         +
                         updateMessage + browserIconList +
-                        '<p><a href="#" id="buttonCloseUpdateBrowser" title="' +
-                        messages.close + '">' + messages.close + '</a></p></div>'
+                        '<button id="buttonCloseUpdateBrowser">' + messages.close + '</button></div>'
                     );
                 };
 

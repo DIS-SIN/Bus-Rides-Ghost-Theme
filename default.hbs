@@ -11,22 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{!-- Styles'n'Scripts --}}
-    <script src="{{asset "js/outdatedBrowser.js"}}"></script>
+    <script src="{{asset "js/outdatedBrowser-min.js"}}"></script>
     {{!-- Test for outdated browser --}}
     <script>
 	    outdatedBrowserRework({
         browserSupport: {
-          Chrome: false, // Includes Chrome for mobile devices
-          Edge: 39,
-          Safari: 10,
-          "Mobile Safari": 10,
-          Firefox: false,
-          Opera: 50,
-          // You could specify a version here if you still support IE in 2017.
-          // You could also instead seriously consider what you're doing with your time and budget
+          Opera: false,
           IE: false
         },
-        requireChromeOnAndroid: false,
+        requireChromeOnAndroid: true,
         isUnknownBrowserOK: false,
       });
     </script>

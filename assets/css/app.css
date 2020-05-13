@@ -5508,12 +5508,24 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 /* 13. Outdated Browser Notice
 /* ---------------------------------------------------------- */
 #outdated {
+  display: none;
+  position: fixed;
+  z-index: 1500;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.32);
+}
+#outdated-content{
   font-family: "Segoe UI", "Open Sans", sans-serif;
   font-size: 18px;
   position: absolute;
   background-color: #ffffff;
   color: #122f48;
-  display: none;
+
   overflow: hidden;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -5524,19 +5536,17 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   top: 50%;
   width: 560px;
   height: 276px;
-  z-index: 1500;
+
   filter: drop-shadow(5.657px 5.657px 7px rgba(0,0,0,0.5));}
-  #outdated.fullscreen {
-    height: 100%; }
-  #outdated .title {
+  #outdated-content .title {
     font-size: 21px;
     font-weight: bold;
     padding: 1em 0;}
-  #outdated p {
+  #outdated-content p {
     font-size: 18px;
     font-weight: bold;
     padding: 0 2em;}
-  #outdated #buttonCloseUpdateBrowser {
+  #outdated-content #buttonCloseUpdateBrowser {
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 16px;
@@ -5550,47 +5560,61 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     border-radius: 4px;
     padding: 5px 10px;
     background-color: #122f48; }
-  #outdated #buttonCloseUpdateBrowser:hover {
-      background-color: white;
-      color: #f25648; }
-  #outdated .browserIconContainer {
+  #outdated-content #buttonCloseUpdateBrowser:hover {
+      background-color: white;}
+  #outdated-content #buttonCloseUpdateBrowser:active {
+    background-color: white;}
+  #outdated-content .browserIconContainer {
     display: inline-block;
-    padding: 0 1em;
+    padding: 0.5em 0.5em ;
+    width: 90px;
 
   }
-  #outdated .browserList {
-    padding: 1.5em 0;
+  #outdated-content .browserList {
+    padding: 1.5em 0 1em 0;
   }
-  #outdated .browserIcon {
-    height: 50px;
+  #outdated-content .browserIcon {
+    height: 45px;
     padding-bottom: 5px;
   }
-  #outdated .disabled {
+  #outdated-content .disabled {
     opacity: 38%;
   }
-  #outdated .disabledIcon {
+  #outdated-content .disabledIcon {
     fill: #000000;
     opacity: 85%
   }
 
-  #outdated .iconLabel {
-    font-size: 18px;
+  #outdated-content .iconLabel {
     font-weight: bold;
     text-align: center;
   }  
 
+@media only screen and (max-width: 48rem) {
+  #outdated-content {
+    font-size: 16px;
+    width: 328px;
+    height: 433px;}
+    #outdated-content .title {
+      font-size: 21px;
+      padding: 1em 0;}
+    #outdated-content p {
+      padding: 0 2em;}
+}
+
 @media (prefers-color-scheme:dark) {
-  #outdated {
+  #outdated-content{
     background-color: #212121;
     color: #ffffff;
     border: 1px solid #707070;}
-    #outdated #buttonCloseUpdateBrowser {
+    #outdated-content #buttonCloseUpdateBrowser {
       color: #000000;
       background-color: #10d0ea; }
-    #outdated #buttonCloseUpdateBrowser:hover {
-        background-color: white;
-        color: #f25648; }
-    #outdated .disabledIcon {
+    #outdated-content #buttonCloseUpdateBrowser:hover {
+        background-color: white;}
+    #outdated-content #buttonCloseUpdateBrowser:active {
+      background-color: white;}
+    #outdated-content .disabledIcon {
       fill: #ffffff;
     }
 }

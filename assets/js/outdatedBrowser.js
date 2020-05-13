@@ -382,7 +382,6 @@
                 var browserSupport = options.browserSupport ? updateDefaults(DEFAULTS, options.browserSupport) : DEFAULTS;
                 // CSS property to check for. You may also like 'borderSpacing', 'boxShadow', 'transform', 'borderImage';
                 var requiredCssProperty = options.requiredCssProperty || false;
-                var fullscreen = options.fullscreen || false;
                 var language = pageLang(); // Language code
   
                 // Chrome mobile is still Chrome (unlike Safari which is 'Mobile Safari')
@@ -498,6 +497,7 @@
    
                     buttonClose.onmousedown = function () {
                         outdatedUI.style.display = 'none';
+                        sessionStorage.setItem('outdated', 'acknowledged');
                         return false;
                     };
                 };
@@ -559,13 +559,9 @@
                             }
                         }
     
-                        var insertContentHere = document.getElementById('outdated');
-                        if (fullscreen) {
-                            insertContentHere.classList.add('fullscreen');
-                        }
+                        var insertContentHere = document.getElementById('outdated-content');
                         insertContentHere.innerHTML = getmessage(language);
                         startStylesAndEvents();
-                        // sessionStorage.setItem('outdated', 'acknowledged');
                     }
                 }
             };

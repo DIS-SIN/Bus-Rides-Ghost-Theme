@@ -5505,3 +5505,116 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   }
 }
 
+/* 13. Outdated Browser Notice
+/* ---------------------------------------------------------- */
+#outdated {
+  display: none;
+  position: fixed;
+  z-index: 1500;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.32);
+}
+#outdated-content{
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  font-size: 18px;
+  position: absolute;
+  background-color: #ffffff;
+  color: #122f48;
+
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  position: fixed;
+  text-align: center;
+  border: 1px solid #707070;
+  border-radius: 16px;
+  top: 50%;
+  width: 560px;
+  height: 276px;
+
+  filter: drop-shadow(5.657px 5.657px 7px rgba(0,0,0,0.5));}
+  #outdated-content .title {
+    font-size: 21px;
+    font-weight: bold;
+    padding: 1em 0;}
+  #outdated-content p {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 2em;}
+  #outdated-content #buttonCloseUpdateBrowser {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    width: 99px;
+    height: 36px;
+    border-radius: 6px;
+    border: none;
+    background-color: #122f48; }
+  #outdated-content #buttonCloseUpdateBrowser:hover {
+      background-color: #253F56;}
+  #outdated-content #buttonCloseUpdateBrowser:active {
+    background-color: #4B6174;}
+  #outdated-content .browserIconContainer {
+    display: inline-block;
+    padding: 0.5em 0.5em ;
+    width: 90px;
+
+  }
+  #outdated-content .browserList {
+    padding: 1.5em 0 0.5em 0;
+  }
+  #outdated-content .browserIcon {
+    height: 45px;
+    padding-bottom: 5px;
+  }
+  #outdated-content .disabled {
+    opacity: 38%;
+  }
+  #outdated-content .disabledIcon {
+    fill: #000000;
+    opacity: 85%
+  }
+
+  #outdated-content .iconLabel {
+    font-weight: bold;
+    text-align: center;
+  }  
+
+@media only screen and (max-width: 48rem) {
+  #outdated-content {
+    font-size: 16px;
+    width: 328px;
+    height: 433px;}
+    #outdated-content .title {
+      font-size: 21px;
+      padding: 1em 0;}
+    #outdated-content p {
+      padding: 0 2em;}
+}
+
+@media (prefers-color-scheme:dark) {
+  #outdated-content{
+    background-color: #212121;
+    color: #ffffff;
+    border: 1px solid #707070;}
+    #outdated-content #buttonCloseUpdateBrowser {
+      color: #000000;
+      background-color: #10d0ea; }
+    #outdated-content #buttonCloseUpdateBrowser:hover {
+        background-color: #0FC0D8;}
+    #outdated-content #buttonCloseUpdateBrowser:active {
+      background-color: #0C9EB2;}
+    #outdated-content .disabledIcon {
+      fill: #ffffff;
+    }
+}

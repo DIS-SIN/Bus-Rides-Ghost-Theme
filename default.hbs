@@ -11,6 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{!-- Styles'n'Scripts --}}
+    <script src="{{asset "js/outdatedBrowser-min.js"}}"></script>
+    {{!-- Test for outdated browser --}}
+    <script>
+	    outdatedBrowserRework({
+        browserSupport: {
+          Opera: false,
+          IE: false
+        },
+        requireChromeOnAndroid: true,
+        isUnknownBrowserOK: false,
+      });
+    </script>
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -75,5 +87,7 @@
 
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
+    <div id="outdated"><div id="outdated-content"></div>    
   </body>
+
 </html>

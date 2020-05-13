@@ -18,7 +18,6 @@ const translateMe = {
       const PATH = window.location.pathname;
 
       if (PATH.includes("/tag/")){
-          console.log("woo");
           return PATH.includes("/fr-") ? "fr" : "en";
       }
 

@@ -510,22 +510,22 @@
                     var updateMessage = '<p>' + messages.update.web + '</p>';
 
                     var browserIconList = '<div class="browserList">'
-                    + '<span class="browserIconContainer disabled">'
+                    + '<span class="browserIconContainer' + (browserSupport.IE ? '' : ' disabled') + '">'
                     + IE_ICON + '<div class="iconLabel">IE 11</div>'
                     + '</span>'
-                    + '<span class="browserIconContainer">'
+                    + '<span class="browserIconContainer' + (browserSupport.Edge ? '' : ' disabled') + '">'
                     + EDGE_ICON + '<div class="iconLabel">Edge</div>'
                     + '</span>'
-                    + '<span class="browserIconContainer">'
+                    + '<span class="browserIconContainer' + (browserSupport.Chrome ? '' : ' disabled') + '">'
                     + CHROME_ICON + '<div class="iconLabel">Chrome</div>'
                     + '</span>'
-                    + '<span class="browserIconContainer">'
+                    + '<span class="browserIconContainer' + (browserSupport.Firefox ? '' : ' disabled') + '">'
                     + FIREFOX_ICON + '<div class="iconLabel">Firefox</div>'
                     + '</span>'
-                    + '<span class="browserIconContainer">'
+                    + '<span class="browserIconContainer' + (browserSupport.Safari ? '' : ' disabled') + '">'
                     + SAFARI_ICON + '<div class="iconLabel">Safari</div>'
                     + '</span>'
-                    + '<span class="browserIconContainer disabled">'
+                    + '<span class="browserIconContainer' + (browserSupport.Opera ? '' : ' disabled') + '">'
                     + OPERA_ICON + '<div class="iconLabel">Opera</div>'
                     + '</span></div>';
   

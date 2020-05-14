@@ -5544,7 +5544,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     padding: 1em 0;}
   #outdated-content p {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
     padding: 0 2em;}
   #outdated-content #buttonCloseUpdateBrowser {
     font-size: 16px;
@@ -5566,6 +5566,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     background-color: #4B6174;}
   #outdated-content .browserIconContainer {
     display: inline-block;
+    position: relative;
     padding: 0.5em 0.5em ;
     width: 90px;
 

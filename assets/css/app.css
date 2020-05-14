@@ -5579,11 +5579,11 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     padding-bottom: 5px;
   }
   #outdated-content .disabled {
-    opacity: 38%;
+    opacity: 0.38;
   }
   #outdated-content .disabledIcon {
     fill: #000000;
-    opacity: 85%
+    opacity: 0.85
   }
 
   #outdated-content .iconLabel {

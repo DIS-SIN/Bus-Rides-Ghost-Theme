@@ -5580,6 +5580,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   }
   #outdated-content .disabled {
     opacity: 0.38;
+    color: #000000;
   }
   #outdated-content .disabledIcon {
     fill: #000000;

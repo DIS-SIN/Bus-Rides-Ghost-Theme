@@ -5619,4 +5619,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     #outdated-content .disabledIcon {
       fill: #ffffff;
     }
+    #outdated-content .disabled {
+      color: #ffffff;
+    }
 }

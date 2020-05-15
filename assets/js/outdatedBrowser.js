@@ -105,22 +105,7 @@
             18: 44
         };
 
-        var IE_ICON = `<svg class="browserIcon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        viewBox="0 0 13.683 13.683" style="enable-background:new 0 0 13.683 13.683;" xml:space="preserve">
-     <g>
-       <path class="disabledIcon" d="M12.054,0c-0.178,0-0.355,0-0.533,0c-0.5,0.073-1.227,0.302-1.836,0.592
-         c-0.506,0.241-1.082,0.761-1.482,0.83c-0.291,0.05-0.604-0.099-0.888-0.119c-3.636-0.26-5.938,2.295-6.279,5.894
-         c1.25-1.476,2.987-3.855,4.976-4.591c-2.868,2.126-5.469,5.647-5.627,8.708c0,0.178,0,0.355,0,0.533
-         c0.167,0.979,0.594,1.695,1.599,1.836c0.158,0,0.316,0,0.474,0c1.443-0.195,2.441-0.838,3.436-1.48
-         c3.687,0.529,6.054-1.188,6.931-3.852c-1.303,0-2.607,0-3.91,0c-0.41,2.002-4.099,1.49-3.613-0.77c2.527,0,5.054,0,7.582,0
-         c0.197-3.634-1.594-5.277-4.205-6.101c0.813-0.49,3.246-1.913,4.205-0.711c0.422,0.53,0.162,1.643,0.059,2.251
-         c0.182-0.372,0.238-0.869,0.355-1.303c0-0.178,0-0.355,0-0.533C13.175,0.496,12.738,0.125,12.054,0z M5.596,12.112
-         c-0.743,0.494-3.199,1.691-4.028,0.533c-0.585-0.816,0.115-2.072,0.415-2.783C2.845,10.954,3.97,11.784,5.596,12.112z M9.019,5.532
-         L5.347,5.534C5.205,3.266,9.261,3.101,9.019,5.532z"/>
-     </g>
-     </svg>`;
-
-        var EDGE_ICON = `<svg class="browserIcon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       var EDGE_ICON = `<svg class="browserIcon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 512.005 512.005" style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve">
      <path style="fill:#2196F3;" d="M19.443,227.392h0.288c3.04-24.032,8.64-47.04,16.736-69.088s19.072-42.72,32.896-62.08
        s29.792-36.128,47.904-50.336s39.424-25.408,63.936-33.6S232.083,0,260.275,0c44.064,0,83.52,10.048,118.432,30.176
@@ -513,22 +498,19 @@
                     var updateMessage = '<p>' + messages.update.web + '</p>';
 
                     var browserIconList = '<div class="browserList">'
-                    + '<span class="browserIconContainer' + (browserSupport.IE ? '' : ' disabled') + '">'
-                    + IE_ICON + '<div class="iconLabel">IE 11</div>'
-                    + '</span>'
-                    + '<span class="browserIconContainer' + (browserSupport.Edge ? '' : ' disabled') + '">'
+                    + '<span class="browserIconContainer">'
                     + EDGE_ICON + '<div class="iconLabel">Edge</div>'
                     + '</span>'
-                    + '<span class="browserIconContainer' + (browserSupport.Chrome ? '' : ' disabled') + '">'
+                    + '<span class="browserIconContainer">'
                     + CHROME_ICON + '<div class="iconLabel">Chrome</div>'
                     + '</span>'
-                    + '<span class="browserIconContainer' + (browserSupport.Firefox ? '' : ' disabled') + '">'
+                    + '<span class="browserIconContainer">'
                     + FIREFOX_ICON + '<div class="iconLabel">Firefox</div>'
                     + '</span>'
-                    + '<span class="browserIconContainer' + (browserSupport.Safari ? '' : ' disabled') + '">'
+                    + '<span class="browserIconContainer">'
                     + SAFARI_ICON + '<div class="iconLabel">Safari</div>'
                     + '</span>'
-                    + '<span class="browserIconContainer' + (browserSupport.Opera ? '' : ' disabled') + '">'
+                    + '<span class="browserIconContainer">'
                     + OPERA_ICON + '<div class="iconLabel">Opera</div>'
                     + '</span></div>';
   
@@ -584,27 +566,19 @@
     },{'./extend': 1,'./languages.json': 3,'ua-parser-js': 4}],3: [function (require,module,exports){
         module.exports = {
             en: {
-                outOfDate: 'You seem to be using an unsupported web browser',
+                outOfDate: 'Your current browser is not compatible with this website',
                 update: {
-                    web: 'To get the most out of your Busrides experience, please use one of the following supported browsers.',
-                    googlePlay: 'Please install Chrome from Google Play',
-                    appStore: 'Please update iOS from the Settings App'
+                    web: 'To get the most out of your Busrides experience, please use one of the following supported browsers.'
                 },
-                url: 'https://browser-update.org/update-browser.html',
-                callToAction: 'Update my browser now',
-                close: 'GOT IT'
+                close: 'Got it'
             },
  
             fr: {
-                outOfDate: 'Votre navigateur n\'est plus compatible !',
+                outOfDate: 'Votre navigateur actuel n\'est pas compatible avec ce site Web',
                 update: {
-                    web: 'Mettez à jour votre navigateur pour afficher correctement ce site Web. ',
-                    googlePlay: 'Merci d\'installer Chrome depuis le Google Play Store',
-                    appStore: 'Merci de mettre à jour iOS depuis l\'application Réglages'
+                    web: 'Pour améliorer votre expérience de navigation sur Trajet en bus, veuillez utiliser l\'un des navigateurs recommandés suivants.'
                 },
-                url: 'https://browser-update.org/update-browser.html',
-                callToAction: 'Mettre à jour maintenant ',
-                close: 'Fermer'
+                close: 'Compris'
             }
         };
     },{}],4: [function (require,module,exports){

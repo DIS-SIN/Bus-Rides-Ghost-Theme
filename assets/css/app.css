@@ -5534,7 +5534,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   border: 1px solid #707070;
   border-radius: 16px;
   top: 50%;
-  width: 560px;
+  width: 700px;
   height: 276px;
 
   filter: drop-shadow(5.657px 5.657px 7px rgba(0,0,0,0.5));}
@@ -5578,14 +5578,6 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     height: 45px;
     padding-bottom: 5px;
   }
-  #outdated-content .disabled {
-    opacity: 0.38;
-    color: #000000;
-  }
-  #outdated-content .disabledIcon {
-    fill: #000000;
-    opacity: 0.85
-  }
 
   #outdated-content .iconLabel {
     font-weight: bold;
@@ -5595,8 +5587,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 @media only screen and (max-width: 48rem) {
   #outdated-content {
     font-size: 16px;
-    width: 328px;
-    height: 433px;}
+    width: 360px;
+    height: 440px;}
     #outdated-content .title {
       font-size: 21px;
       padding: 1em 0;}
@@ -5616,10 +5608,4 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
         background-color: #0FC0D8;}
     #outdated-content #buttonCloseUpdateBrowser:active {
       background-color: #0C9EB2;}
-    #outdated-content .disabledIcon {
-      fill: #ffffff;
-    }
-    #outdated-content .disabled {
-      color: #ffffff;
-    }
 }
